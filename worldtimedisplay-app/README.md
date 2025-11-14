@@ -29,7 +29,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/mrudularavishankar-sangamone/WorldTimeDisplay.git
+   git clone https://github.com/mrudularavishankar-sangamone/WorldTimeDisplay
    cd WorldTimeDisplay/worldtimedisplay-app
    ```
 
