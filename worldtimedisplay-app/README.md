@@ -79,8 +79,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
    - Add the 'export default function page1(){}' statement 
    - Create an array of cities inside page1() function:
      ```
-       const cities = [
-    { name : 'San Francisco', timezone: 'America/Los_Angeles' },    
+       const cities = [ { name : 'San Francisco', timezone: 'America/Los_Angeles' },    
     { name: 'Chicago', timezone: 'America/Chicago' },    
     { name: 'New York', timezone: 'America/New_York' },    
     { name: 'London', timezone: 'Europe/London' },   
