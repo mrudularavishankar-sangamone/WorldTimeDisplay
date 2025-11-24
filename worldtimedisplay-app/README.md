@@ -39,7 +39,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
    ```
 
 3. **Start the development server:**
-   ```bash
+   ```
    npm start
    ```
    The app will open in your browser at `http://localhost:3000`
