@@ -28,13 +28,13 @@ This ReactJS app displays the current local time in 10 major cities around the w
 ### Steps:
 
 1. **Clone the repository:**
-   ```bash
+   ```
    git clone https://github.com/mrudularavishankar-sangamone/WorldTimeDisplay
    cd WorldTimeDisplay/worldtimedisplay-app
    ```
 
 2. **Install dependencies:**
-   ```bash
+   ```
    npm install
    ```
 
@@ -44,10 +44,10 @@ This ReactJS app displays the current local time in 10 major cities around the w
    ```
    The app will open in your browser at `http://localhost:3000`
 
-4.  **Delete**
-   ```bash
-   npm start
-   ```
-   The app will open in your browser at `http://localhost:3000`
+4.  **Delete the following files**
+   1. index.css
+   2. App.tests.js
+   3. 
+
 ## Images/Icons Used:
 - https://www.freepik.com/icon/time-zone_2340162#fromView=families&page=1&position=1&uuid=7a49de49-7d70-4fcf-ac07-2f11f7cf0700
