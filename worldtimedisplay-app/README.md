@@ -44,11 +44,10 @@ This ReactJS app displays the current local time in 10 major cities around the w
    ```
    The app will open in your browser at `http://localhost:3000`
 
-4. **Build for production:**
+4.  **Delete**
    ```bash
-   npm run build
+   npm start
    ```
-   This creates an optimized production build in the `build/` folder.
-
+   The app will open in your browser at `http://localhost:3000`
 ## Images/Icons Used:
 - https://www.freepik.com/icon/time-zone_2340162#fromView=families&page=1&position=1&uuid=7a49de49-7d70-4fcf-ac07-2f11f7cf0700
