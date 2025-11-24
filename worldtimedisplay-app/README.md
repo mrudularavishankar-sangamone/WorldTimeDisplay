@@ -76,17 +76,14 @@ This ReactJS app displays the current local time in 10 major cities around the w
 8. **Grouping the jsx files**
    - Create a folder called pages under src
    - Create a file called pages/page1.jsx
-   - Add the 'export default function page1(){}' statement 
+   - Add the 'export default function Page1(){}' statement 
    - Create an array of cities inside page1() function:
      ```
        const cities = [ { name : 'San Francisco', timezone: 'America/Los_Angeles' }, { name: 'Chicago', timezone: 'America/Chicago' }, { name: 'New York', timezone: 'America/New_York' }, { name: 'London', timezone: 'Europe/London' }, { name: 'Dubai', timezone: 'Asia/Dubai' }, { name: 'Bengaluru', timezone: 'Asia/Kolkata' }, { name: 'Singapore', timezone: 'Asia/Singapore' }, { name: 'Tokyo', timezone: 'Asia/Tokyo' }, { name: 'Sydney', timezone: 'Australia/Sydney' }, { name: 'Wellington', timezone: 'Pacific/Auckland' } ];
      ```
    - Display the list of cities as per the code below:
      ```
-     return(
-    <div>
-      <h1> World Clock Display </h1>
-      <ul> {cities[0].name} </ul>
+     return( <div> <h1> World Clock Display </h1> <ul> {cities[0].name} </ul>
       <ul> {cities[1].name} </ul>
       <ul> {cities[2].name} </ul>
       <ul> {cities[3].name} </ul>
@@ -116,8 +113,40 @@ This ReactJS app displays the current local time in 10 major cities around the w
    - Verify the output at `http://localhost:3000`.
      <img width="404" height="484" alt="image" src="https://github.com/user-attachments/assets/ac677e39-4836-4e7e-8f9a-b2f0dc15185a" />
 
-     
-     
+10. **Create page2.jsx under src**
+   - Create a file called pages/page2.jsx
+   - Import the useState in-built function from React
+     ```
+      import { useState } from 'react';
+     ```
+   - Add the 'export default function Page2( {city} ){}' statement
+   - Create an array of time and setTime to hold the current time:
+     ```
+      const [time, setTime] = useState(new Date());
+     ```
+   - Add a return statement to display the time:
+     ```
+     return(
+       <div>
+         <p> {city.name}: {time.toLocaleTimeString()} </p>
+       </div>
+     )
+     ```
+11. **Include page2.jsx reference in page1.jsx**
+    ```
+    import Page2 from "./page2.jsx";
+    ```
+    - Add <Page2/> React tag within the return()
+      ```
+      return(
+    <div>
+      <h1> World Clock Display </h1>
+      <ul> {cities.map((city, index) => (
+        <Page2 key = {index} city = {city}/>
+      ))} </ul>
+    </div>
+  )
+      ```
    
 
 ## Images/Icons Used:
