@@ -1,4 +1,4 @@
-# World Time Display
+<img width="404" height="484" alt="image" src="https://github.com/user-attachments/assets/fc895eb4-2913-4ad3-aee5-a005d07c477e" /># World Time Display
 
 This ReactJS app displays the current local time in 10 major cities around the world. It helps users easily check the time in different parts of the world at a glance.
 
@@ -49,25 +49,86 @@ This ReactJS app displays the current local time in 10 major cities around the w
    ```
    The app will open in your browser at `http://localhost:3000`
 
-5.  **Delete the following files**
+5.  **Delete the following files from src**
+   - App.test.js
    - index.css
-   - App.tests.js
-   - WebReportVitals.js
-   - Tests.js
    - logo.svg
+   - reportWebVitals.js
+   - setupTests.js
 
 6. **Modify index.js file**
-   - Delete the WebReportVitals import statement
+   - Delete the reportWebVitals import statement
    - Delete the index.css import statement
-   - Delete the webreportvital() from the bottom of the code
+   - Delete the comments
+   - Delete the reportWebVitals() from the bottom of the code
   
 7. **Modify App.js file**
    - Delete the logo.svg import statement
    - Delete all the lines of code between the return() in App function
-   - Add a <p>My React Application</p> statement in the return()
+   - Add the following statements in the return()
+     ```
+     <>
+      <p>My React App</p>
+     </>
+     ```
    - Verify the output at `http://localhost:3000`. Now, the React Application is ready. 
      
-8. ****
+8. **Grouping the jsx files**
+   - Create a folder called pages under src
+   - Create a file called pages/page1.jsx
+   - Add the 'export default function page1(){}' statement 
+   - Create an array of cities inside page1() function:
+     ```
+       const cities = [
+    { name : 'San Francisco', timezone: 'America/Los_Angeles' }, 
+    { name: 'Chicago', timezone: 'America/Chicago' }, 
+    { name: 'New York', timezone: 'America/New_York' }, 
+    { name: 'London', timezone: 'Europe/London' },
+    { name: 'Dubai', timezone: 'Asia/Dubai' },
+    { name: 'Bengaluru', timezone: 'Asia/Kolkata' },
+    { name: 'Singapore', timezone: 'Asia/Singapore' },
+    { name: 'Tokyo', timezone: 'Asia/Tokyo' },
+    { name: 'Sydney', timezone: 'Australia/Sydney' },    
+    { name: 'Wellington', timezone: 'Pacific/Auckland' }    
+  ];
+     ```
+   - Display the list of cities as per the code below:
+     ```
+     return(
+    <div>
+      <h1> World Clock Display </h1>
+      <ul> {cities[0].name} </ul>
+      <ul> {cities[1].name} </ul>
+      <ul> {cities[2].name} </ul>
+      <ul> {cities[3].name} </ul>
+      <ul> {cities[4].name} </ul>
+      <ul> {cities[5].name} </ul>
+      <ul> {cities[6].name} </ul>
+      <ul> {cities[7].name} </ul>
+      <ul> {cities[8].name} </ul>
+      <ul> {cities[9].name} </ul>
+    </div>
+  )
+     ```
+
+9. **Include page1.jsx reference in App.js**
+    ```
+    import Page1 from './pages/page1.jsx';
+    ```
+    - Add <Page1/> React tag within the return()
+      ```
+      return (
+       <>
+         <p>My React App</p>
+         <Page1 />
+       </>
+      );
+      ```
+   - Verify the output at `http://localhost:3000`.
+     <img width="404" height="484" alt="image" src="https://github.com/user-attachments/assets/ac677e39-4836-4e7e-8f9a-b2f0dc15185a" />
+
+     
+     
    
 
 ## Images/Icons Used:
