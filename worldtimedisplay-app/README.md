@@ -150,7 +150,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
      ```
 11. **Include page2.jsx reference in page1.jsx**
     ```
-    import Page2 from "./page2.jsx";
+    import Page2 from './page2.jsx';
     ```
     - Add <Page2/> React tag within the return() so that the contents of page2.jsx shows up on the screen.
       ```
