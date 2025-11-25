@@ -115,7 +115,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
     ```
     import Page1 from './pages/page1.jsx';
     ```
-    - Add <Page1/> React tag within the return()
+    - Add <Page1/> React tag within the return() so that the contents of page1.jsx shows up on the screen.
       ```
       return (
        <>
@@ -151,7 +151,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
     ```
     import Page2 from "./page2.jsx";
     ```
-    - Add <Page2/> React tag within the return()
+    - Add <Page2/> React tag within the return() so that the contents of page2.jsx shows up on the screen.
       ```
       return(
          <div>
@@ -162,7 +162,12 @@ This ReactJS app displays the current local time in 10 major cities around the w
          </div>
         )
       ```
-   
+      We use .map() so React can automatically display all cities in the list without writing the same <ul> line over and
+      over.
+   - Verify the output at `http://localhost:3000`.
+
+     <img width="512" height="689" alt="image" src="https://github.com/user-attachments/assets/7cf4e9ed-f892-428a-9d26-e9843170676c" />
+
 
 ## Images/Icons Used:
 - https://www.freepik.com/icon/time-zone_2340162#fromView=families&page=1&position=1&uuid=7a49de49-7d70-4fcf-ac07-2f11f7cf0700
