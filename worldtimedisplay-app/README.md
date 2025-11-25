@@ -129,7 +129,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
      
      <img width="404" height="484" alt="image" src="https://github.com/user-attachments/assets/ac677e39-4836-4e7e-8f9a-b2f0dc15185a" />
 
-10. **Create page2.jsx under src**
+10. **Create page2.jsx under src/pages**
    - Create a file called pages/page2.jsx
    - Import the useState in-built function from React:
      ```
