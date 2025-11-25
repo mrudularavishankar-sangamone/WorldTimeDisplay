@@ -50,11 +50,11 @@ This ReactJS app displays the current local time in 10 major cities around the w
    The app will open in your browser at `http://localhost:3000`
 
 5.  **Delete the following files from src**
-   - App.test.js
-   - index.css
-   - logo.svg
-   - reportWebVitals.js
-   - setupTests.js
+    - App.test.js
+    - index.css
+    - logo.svg
+    - reportWebVitals.js
+    - setupTests.js
 
 6. **Modify index.js file**
    - Delete the reportWebVitals import statement
