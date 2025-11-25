@@ -168,6 +168,19 @@ This ReactJS app displays the current local time in 10 major cities around the w
 
      <img width="512" height="689" alt="image" src="https://github.com/user-attachments/assets/7cf4e9ed-f892-428a-9d26-e9843170676c" />
 
+12. **Adding the Timezones to each of the city**
+    - The above step (Step11) displays only the time acquired from the system and does not specifically display the time in each city. In order to display the respective time in each city, we need to add to page2.jsx:
+    ```
+      const formattedTime = time.toLocaleTimeString('en-US', {
+          timeZone: city.timezone
+      });
+
+      return(
+          <div>
+            <p> {city.name}: { formattedTime } </p>
+          </div>
+      )
+    ```
 
 ## Images/Icons Used:
 - https://www.freepik.com/icon/time-zone_2340162#fromView=families&page=1&position=1&uuid=7a49de49-7d70-4fcf-ac07-2f11f7cf0700
