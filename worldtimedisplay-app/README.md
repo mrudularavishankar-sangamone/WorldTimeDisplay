@@ -157,8 +157,8 @@ This ReactJS app displays the current local time in 10 major cities around the w
       return(
          <div>
             <h1> World Clock Display </h1>
-            <ul> {cities.map((city, index) => (
-              <Page2 key = {index} city = {city}/> ))}
+            <ul> {cities.map((c, index) => (
+              <Page2 key = {index} city = {c}/> ))}
             </ul>
          </div>
         )
