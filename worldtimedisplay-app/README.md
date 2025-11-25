@@ -35,8 +35,9 @@ This ReactJS app displays the current local time in 10 major cities around the w
 
 2. **Install the React package and its dependencies:**
    ```
-   npx create-react-app <AppName>
+   npx create-react-app <app-name>
    ```
+   P.S: The AppName should only contain **lowercase alphabets**
 
 3. **Changing the directory to the <AppName>**
    ```
