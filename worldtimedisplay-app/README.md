@@ -125,11 +125,12 @@ This ReactJS app displays the current local time in 10 major cities around the w
       );
       ```
    - Verify the output at `http://localhost:3000`.
+     
      <img width="404" height="484" alt="image" src="https://github.com/user-attachments/assets/ac677e39-4836-4e7e-8f9a-b2f0dc15185a" />
 
 10. **Create page2.jsx under src**
    - Create a file called pages/page2.jsx
-   - Import the useState in-built function from React
+   - Import the useState in-built function from React:
      ```
       import { useState } from 'react';
      ```
@@ -141,9 +142,9 @@ This ReactJS app displays the current local time in 10 major cities around the w
    - Add a return statement to display the time:
      ```
      return(
-       <div>
-         <p> {city.name}: {time.toLocaleTimeString()} </p>
-       </div>
+        <div>
+           <p> {city.name}: {time.toLocaleTimeString()} </p>
+        </div>
      )
      ```
 11. **Include page2.jsx reference in page1.jsx**
@@ -153,13 +154,13 @@ This ReactJS app displays the current local time in 10 major cities around the w
     - Add <Page2/> React tag within the return()
       ```
       return(
-    <div>
-      <h1> World Clock Display </h1>
-      <ul> {cities.map((city, index) => (
-        <Page2 key = {index} city = {city}/>
-      ))} </ul>
-    </div>
-  )
+         <div>
+            <h1> World Clock Display </h1>
+            <ul> {cities.map((city, index) => (
+              <Page2 key = {index} city = {city}/> ))}
+            </ul>
+         </div>
+        )
       ```
    
 
