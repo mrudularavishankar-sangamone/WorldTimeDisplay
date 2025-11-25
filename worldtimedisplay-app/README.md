@@ -82,22 +82,33 @@ This ReactJS app displays the current local time in 10 major cities around the w
        const cities = [
            { name : 'San Francisco', timezone: 'America/Los_Angeles' },
            { name: 'Chicago', timezone: 'America/Chicago' },
-           { name: 'New York', timezone: 'America/New_York' }, { name: 'London', timezone: 'Europe/London' }, { name: 'Dubai', timezone: 'Asia/Dubai' }, { name: 'Bengaluru', timezone: 'Asia/Kolkata' }, { name: 'Singapore', timezone: 'Asia/Singapore' }, { name: 'Tokyo', timezone: 'Asia/Tokyo' }, { name: 'Sydney', timezone: 'Australia/Sydney' }, { name: 'Wellington', timezone: 'Pacific/Auckland' } ];
+           { name: 'New York', timezone: 'America/New_York' },
+           { name: 'London', timezone: 'Europe/London' },
+           { name: 'Dubai', timezone: 'Asia/Dubai' },
+           { name: 'Bengaluru', timezone: 'Asia/Kolkata' },
+           { name: 'Singapore', timezone: 'Asia/Singapore' },
+           { name: 'Tokyo', timezone: 'Asia/Tokyo' },
+           { name: 'Sydney', timezone: 'Australia/Sydney' },
+           { name: 'Wellington', timezone: 'Pacific/Auckland' }
+        ];
      ```
    - Display the list of cities as per the code below:
      ```
-     return( <div> <h1> World Clock Display </h1> <ul> {cities[0].name} </ul>
-      <ul> {cities[1].name} </ul>
-      <ul> {cities[2].name} </ul>
-      <ul> {cities[3].name} </ul>
-      <ul> {cities[4].name} </ul>
-      <ul> {cities[5].name} </ul>
-      <ul> {cities[6].name} </ul>
-      <ul> {cities[7].name} </ul>
-      <ul> {cities[8].name} </ul>
-      <ul> {cities[9].name} </ul>
-    </div>
-  )
+     return(
+        <div>
+           <h1> World Clock Display </h1>
+           <ul> {cities[0].name} </ul>
+           <ul> {cities[1].name} </ul>
+           <ul> {cities[2].name} </ul>
+           <ul> {cities[3].name} </ul>
+           <ul> {cities[4].name} </ul>
+           <ul> {cities[5].name} </ul>
+           <ul> {cities[6].name} </ul>
+           <ul> {cities[7].name} </ul>
+           <ul> {cities[8].name} </ul>
+           <ul> {cities[9].name} </ul>
+       </div>
+     )
      ```
 
 9. **Include page1.jsx reference in App.js**
