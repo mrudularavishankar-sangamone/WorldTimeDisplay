@@ -189,13 +189,29 @@ This ReactJS app displays the current local time in 10 major cities around the w
 13. **Automatic Time Update**
     - We need to update the time automatically without having to click refresh every second. In order to do this, we use a React Hook called useEffect(), which updates the page after the mentioned time has passed(E.g: 1000ms/ 1s)
       ```
-      useEffect(()=> {
-         const timer = setInterval(()=> {
-            setTime(new Date());
-         }, 1000);
+      import { useState, useEffect } from 'react';
 
-         return () => clearInterval(timer);
-      }, []);
+      export default function Page2( {city} ) {
+         const [time, setTime] = useState(new Date());
+
+         useEffect(()=> {
+             const timer = setInterval(()=> {
+                setTime(new Date());
+             }, 1000);
+
+             return () => clearInterval(timer);
+         }, []);
+
+         const formattedTime = time.toLocaleTimeString('en-US', {
+             timeZone: city.timezone
+         });
+
+         return(
+             <div>
+                <p> {city.name}: { formattedTime } </p>
+             </div>
+         )
+      }
       ```
      - Verify the output at `http://localhost:3000`. The time gets updated automatically.
 
