@@ -181,6 +181,10 @@ This ReactJS app displays the current local time in 10 major cities around the w
           </div>
       )
     ```
+     - Verify the output at `http://localhost:3000`.
+   
+    <img width="527" height="708" alt="image" src="https://github.com/user-attachments/assets/09404544-ae9f-4b88-9efd-2037e0ce1b62" />
+
 
 ## Images/Icons Used:
 - https://www.freepik.com/icon/time-zone_2340162#fromView=families&page=1&position=1&uuid=7a49de49-7d70-4fcf-ac07-2f11f7cf0700
