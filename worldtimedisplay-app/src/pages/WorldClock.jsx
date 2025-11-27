@@ -20,7 +20,7 @@ export default function WorldClock() {
       <h1> Clock Dashboard </h1>
       
       <ul> {cities.map((cityObject, index) => (
-        //key is required when using map to render a list of components to keep track of each component and avoid mix ups
+        //key is required when using map to render a list of components + to keep track of each component and avoid mix ups
         <CityTime key = {index} city = {cityObject}/>
       ))} </ul>
 
