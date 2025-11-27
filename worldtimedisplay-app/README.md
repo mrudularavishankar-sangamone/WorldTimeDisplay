@@ -86,7 +86,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
 8. **Grouping the jsx files**
    - Create a folder called pages under src
    - Create a file called pages/page1.jsx
-   - Add the ```export default function Page1(){ }``` statement 
+   - Add the ```export default function page1(){ }``` statement 
    - Create an array of cities inside page1() function within the { }:
      ```
        const cities = [
@@ -144,12 +144,12 @@ This ReactJS app displays the current local time in 10 major cities around the w
      ```
       import { useState } from 'react';
      ```
-   - Add the ``` export default function Page2({city}) { } ``` statement
-   - Create an array of time and setTime to hold the current time within the { } of the Page2 function:
+   - Add the ``` export default function page2({city}) { } ``` statement
+   - Create an array of time and setTime to hold the current time within the { } of the page2 function:
      ```
      import { useState } from 'react';
       
-     export default function Page2({city}) {
+     export default function page2({city}) {
         const [time, setTime] = useState(new Date());
      }
      ```
@@ -183,7 +183,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
      <img width="512" height="689" alt="image" src="https://github.com/user-attachments/assets/7cf4e9ed-f892-428a-9d26-e9843170676c" />
 
 12. **Adding the Timezones to each of the city**
-    - The above step (Step11) displays only the time acquired from the system and does not specifically display the time in each city. In order to display the respective time in each city, we need to add the following to page2.jsx:
+    - The above step (Step11) displays only the time acquired from the system and does not specifically display the time in each city. In order to display the respective time in each city, we need to add the following to page2.jsx within { } page2() function:
     ```
       const formattedTime = time.toLocaleTimeString('en-US', {
           timeZone: city.timezone
