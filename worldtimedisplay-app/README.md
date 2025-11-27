@@ -153,19 +153,13 @@ This ReactJS app displays the current local time in 10 major cities around the w
         const [time, setTime] = useState(new Date());
      }
      ```
-   - Add a return statement to display the time:
+   - Add a return statement to display the time after the ```const [time, setTime] = useState(new Date());``` statement within { }:
      ```
-     import { useState } from 'react';
-      
-     export default function Page2({city}) {
-        const [time, setTime] = useState(new Date());
-     
-        return(
-           <div>
-              <p> {city.name}: {time.toLocaleTimeString()} </p>
-           </div>
-        )
-     }
+     return(
+        <div>
+           <p> {city.name}: {time.toLocaleTimeString()} </p>
+        </div>
+     )
      ```
 11. **Include page2.jsx reference in page1.jsx**
     ```
