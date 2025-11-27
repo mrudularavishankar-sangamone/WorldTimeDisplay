@@ -86,8 +86,8 @@ This ReactJS app displays the current local time in 10 major cities around the w
 8. **Grouping the jsx files**
    - Create a folder called pages under src
    - Create a file called pages/page1.jsx
-   - Add the ```export default function Page1(){}``` statement 
-   - Create an array of cities inside page1() function within the {}:
+   - Add the ```export default function Page1(){ }``` statement 
+   - Create an array of cities inside page1() function within the { }:
      ```
        const cities = [
            { name : 'San Francisco', timezone: 'America/Los_Angeles' },
@@ -102,7 +102,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
            { name: 'Wellington', timezone: 'Pacific/Auckland' }
         ];
      ```
-   - Display the list of cities as per the code below:
+   - Display the list of cities as per the code below after the cities array within the { }:
      ```
      return(
         <div>
@@ -144,8 +144,8 @@ This ReactJS app displays the current local time in 10 major cities around the w
      ```
       import { useState } from 'react';
      ```
-   - Add the ``` export default function Page2({city}) {} ``` statement
-   - Create an array of time and setTime to hold the current time within the {} of the Page2 function:
+   - Add the ``` export default function Page2({city}) { } ``` statement
+   - Create an array of time and setTime to hold the current time within the { } of the Page2 function:
      ```
      import { useState } from 'react';
       
