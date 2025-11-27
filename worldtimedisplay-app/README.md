@@ -185,15 +185,21 @@ This ReactJS app displays the current local time in 10 major cities around the w
 12. **Adding the Timezones to each of the city**
     - The above step (Step11) displays only the time acquired from the system and does not specifically display the time in each city. In order to display the respective time in each city, we need to add the following to page2.jsx within { } page2() function:
     ```
-      const formattedTime = time.toLocaleTimeString('en-US', {
+     import { useState } from 'react';
+      
+     export default function page2({city}) {
+        const [time, setTime] = useState(new Date());
+         
+        const formattedTime = time.toLocaleTimeString('en-US', {
           timeZone: city.timezone
-      });
-
-      return(
+        });
+         
+        return(
           <div>
             <p> {city.name}: { formattedTime } </p>
           </div>
-      )
+        )
+     } 
     ```
      - Verify the output at `http://localhost:3000`.
    
@@ -204,7 +210,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
       ```
       import { useState, useEffect } from 'react';
       
-      export default function Page2( {city} ) {
+      export default function page2( {city} ) {
            const [time, setTime] = useState(new Date());
 
            function updateTime() {
