@@ -6,29 +6,29 @@ export default function CityTime( { city } ) {
   //Gets upadated every second to reflect the current time
   const [time, setTime] = useState(new Date());
 
-  //Effect hook to set up an interval that updates the time state every second
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTime(new Date());
-    }, 1000);
+  function updateTime() {
+    setTime(new Date());
+  }
 
-    return () => clearInterval(timer); //Cleanup the interval on component unmount
+  //Effect hook to set up an interval that updates the time state every second
+  useEffect(function setupInterval() {
+    const timer = setInterval(updateTime, 1000);
+    
+    ////Cleanup the interval on component unmount
+    return function cleanup() {
+      clearInterval(timer);
+    };
   }, []);
 
   //Formatting the time based on the city's timezone
   //Use an inbuilt JavaScript function that formats timeyones to localtime strings 
   const formattedTime = time.toLocaleTimeString('en-US', { 
-    timeZone: city.timezone,
-    hour12: false, 
-    hour: '2-digit', 
-    minute: '2-digit', 
-    second: '2-digit'
+    timeZone: city.timezone
   });
 
   return (
-    <div className='city-zone'>
-      <h2 className='city-name'> { city.name } </h2>
-      <div className='city-time'> { formattedTime } </div>
+    <div>
+      <p> {city.name}: { formattedTime } </p>
     </div>
   )
 }
