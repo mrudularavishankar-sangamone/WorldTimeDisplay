@@ -27,40 +27,50 @@ This ReactJS app displays the current local time in 10 major cities around the w
 
 ### Steps:
 
-1. **Verify if npm is installed in your device/workspace**
-   
+1. **Verify if npm is installed in your device/workspace(for Windows)**
+   - Before running the project, ensure that **npm** is installed on your system.
+   - Open the Terminal in VSCode.
+   - Run the following command:
+     ```
+      npm -v
+     ```
+     If you see a version number (e.g., 10.4.1), npm is installed. If you see an error like: ``` 'npm' is not recognized as an internal or external command ```, then npm is not installed.
+   - Installing npm:
+      * Download Node.js from 'https://nodejs.org/'.
+      * Install Node.js by running the installer and follow the prompts.
+      * Verify the installation by running the command in terminal ``` npm -v ```
 
-3. **Install the React package and its dependencies:**
+2. **Install the React package and its dependencies:**
    ```
    npx create-react-app <app-name>
    ```
    P.S: The AppName should only contain **lowercase alphabets**
 
-4. **Changing the directory to the <AppName>**
+3. **Changing the directory to the <AppName>**
    ```
    cd <AppName>
    ```
 
-5. **Start the development server:**
+4. **Start the development server:**
    ```
    npm start
    ```
    The app will open in your browser at `http://localhost:3000`
 
-6.  **Delete the following files from src**
+5.  **Delete the following files from src**
     - App.test.js
     - index.css
     - logo.svg
     - reportWebVitals.js
     - setupTests.js
 
-7. **Modify index.js file**
+6. **Modify index.js file**
    - Delete the reportWebVitals import statement
    - Delete the index.css import statement
    - Delete the comments
    - Delete the reportWebVitals() from the bottom of the code
   
-8. **Modify App.js file**
+7. **Modify App.js file**
    - Delete the logo.svg import statement
    - Delete all the lines of code between the return() in App function
    - Add the following statements in the return()
@@ -71,7 +81,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
      ```
    - Verify the output at `http://localhost:3000`. Now, the React Application is ready. 
      
-9. **Grouping the jsx files**
+8. **Grouping the jsx files**
    - Create a folder called pages under src
    - Create a file called pages/page1.jsx
    - Add the 'export default function Page1(){}' statement 
@@ -109,7 +119,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
      )
      ```
 
-10. **Include page1.jsx reference in App.js**
+9. **Include page1.jsx reference in App.js**
     ```
     import Page1 from './pages/page1.jsx';
     ```
@@ -126,7 +136,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
      
      <img width="404" height="484" alt="image" src="https://github.com/user-attachments/assets/ac677e39-4836-4e7e-8f9a-b2f0dc15185a" />
 
-11. **Create page2.jsx under src/pages**
+10. **Create page2.jsx under src/pages**
    - Create a file called pages/page2.jsx
    - Import the useState in-built function from React:
      ```
@@ -145,7 +155,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
         </div>
      )
      ```
-12. **Include page2.jsx reference in page1.jsx**
+11. **Include page2.jsx reference in page1.jsx**
     ```
     import Page2 from './page2.jsx';
     ```
@@ -166,7 +176,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
 
      <img width="512" height="689" alt="image" src="https://github.com/user-attachments/assets/7cf4e9ed-f892-428a-9d26-e9843170676c" />
 
-13. **Adding the Timezones to each of the city**
+12. **Adding the Timezones to each of the city**
     - The above step (Step11) displays only the time acquired from the system and does not specifically display the time in each city. In order to display the respective time in each city, we need to add the following to page2.jsx:
     ```
       const formattedTime = time.toLocaleTimeString('en-US', {
@@ -183,7 +193,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
    
     <img width="527" height="708" alt="image" src="https://github.com/user-attachments/assets/09404544-ae9f-4b88-9efd-2037e0ce1b62" />
 
-14. **Automatic Time Update**
+13. **Automatic Time Update**
     - We need to update the time automatically without having to click refresh every second. In order to do this, we use a React Hook called useEffect(), which updates the page after the mentioned time has passed(E.g: 1000ms/ 1s)
       ```
       import { useState, useEffect } from 'react';
@@ -218,8 +228,3 @@ This ReactJS app displays the current local time in 10 major cities around the w
      - Verify the output at `http://localhost:3000`. The time gets updated automatically.
 
     <img width="477" height="739" alt="image" src="https://github.com/user-attachments/assets/f3a1cf40-4b20-4720-a9af-fb941f215326" />
-
-
-## Images/Icons Used:
-1. Logo Link:
-   https://www.freepik.com/icon/time-zone_2340162#fromView=families&page=1&position=1&uuid=7a49de49-7d70-4fcf-ac07-2f11f7cf0700
