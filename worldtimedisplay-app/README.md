@@ -224,4 +224,5 @@ This ReactJS app displays the current local time in 10 major cities around the w
 
 
 ## Images/Icons Used:
-- https://www.freepik.com/icon/time-zone_2340162#fromView=families&page=1&position=1&uuid=7a49de49-7d70-4fcf-ac07-2f11f7cf0700
+1. Logo Link:
+   https://www.freepik.com/icon/time-zone_2340162#fromView=families&page=1&position=1&uuid=7a49de49-7d70-4fcf-ac07-2f11f7cf0700
