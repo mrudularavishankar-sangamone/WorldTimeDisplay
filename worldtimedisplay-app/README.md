@@ -50,7 +50,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
 
 3. **Changing the directory to the <AppName>**
    ```
-   cd <AppName>
+   cd <app-name>
    ```
 
 4. **Start the development server:**
