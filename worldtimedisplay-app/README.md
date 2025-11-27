@@ -1,4 +1,6 @@
-<img width="404" height="484" alt="image" src="https://github.com/user-attachments/assets/fc895eb4-2913-4ad3-aee5-a005d07c477e" /># World Time Display
+<img width="404" height="484" alt="image" src="https://github.com/user-attachments/assets/fc895eb4-2913-4ad3-aee5-a005d07c477e" />
+
+### World Time Display
 
 This ReactJS app displays the current local time in 10 major cities around the world. It helps users easily check the time in different parts of the world at a glance.
 
@@ -84,8 +86,8 @@ This ReactJS app displays the current local time in 10 major cities around the w
 8. **Grouping the jsx files**
    - Create a folder called pages under src
    - Create a file called pages/page1.jsx
-   - Add the 'export default function Page1(){}' statement 
-   - Create an array of cities inside page1() function:
+   - Add the ```export default function Page1(){}``` statement 
+   - Create an array of cities inside page1() function within the {}:
      ```
        const cities = [
            { name : 'San Francisco', timezone: 'America/Los_Angeles' },
@@ -142,18 +144,28 @@ This ReactJS app displays the current local time in 10 major cities around the w
      ```
       import { useState } from 'react';
      ```
-   - Add the 'export default function page2( {city} ){}' statement
-   - Create an array of time and setTime to hold the current time:
+   - Add the ``` export default function Page2({city}) {} ``` statement
+   - Create an array of time and setTime to hold the current time within the {} of the Page2 function:
      ```
-      const [time, setTime] = useState(new Date());
+     import { useState } from 'react';
+      
+     export default function Page2({city}) {
+        const [time, setTime] = useState(new Date());
+     }
      ```
    - Add a return statement to display the time:
      ```
-     return(
-        <div>
-           <p> {city.name}: {time.toLocaleTimeString()} </p>
-        </div>
-     )
+     import { useState } from 'react';
+      
+     export default function Page2({city}) {
+        const [time, setTime] = useState(new Date());
+     
+        return(
+           <div>
+              <p> {city.name}: {time.toLocaleTimeString()} </p>
+           </div>
+        )
+     }
      ```
 11. **Include page2.jsx reference in page1.jsx**
     ```
