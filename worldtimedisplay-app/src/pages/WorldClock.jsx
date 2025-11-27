@@ -1,4 +1,3 @@
-import React from 'react'
 import CityTime from './CityTime'
 
 export default function WorldClock() {
@@ -17,14 +16,13 @@ export default function WorldClock() {
   ];
 
   return (
-    <div className='world-clock'>
+    <div>
       <h1> Clock Dashboard </h1>
       
-      <ul className='cities'> 
-        {cities.map((city, index) => (
-          <CityTime key={index} city={city} />
-        ))}
-      </ul>
+      <ul> {cities.map((cityObject, index) => (
+        //key is required when using map to render a list of components to keep track of each component and avoid mix ups
+        <Page2 key = {index} city = {cityObject}/>
+      ))} </ul>
 
     </div>
   )
