@@ -72,7 +72,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
      ```
    - Verify the output at `http://localhost:3000`. Now, the React Application is ready. 
      
-7. Grouping the jsx files
+7. Grouping the jsx files:
    - Create a folder called pages under src
    - Create a file called Page1.jsx under pages folder
    - Add the ```export default function Page1(){ }``` statement 
@@ -125,7 +125,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
       ```
    - Verify the output at `http://localhost:3000`.
 
-9. Create Page2.jsx under src/pages
+9. Create Page2.jsx under src/pages:
    - Create a file called Page2.jsx under pages folder
    - Import the useState in-built function from React:
      ```
@@ -148,7 +148,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
         </div>
      )
      ```
-10. Include Page2.jsx reference in Page1.jsx
+10. Include Page2.jsx reference in Page1.jsx:
     ```
     import Page2 from './Page2.jsx';
     ```
@@ -167,7 +167,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
       over.
    - Verify the output at `http://localhost:3000`.
 
-11. Adding the Timezones to each of the city
+11. Adding the Timezones to each of the city:
     - The above step (Step11) displays only the time acquired from the system and does not specifically display the time in each city. In order to display the respective time in each city, we need to add the following to Page2.jsx within { } Page2() function:
     ```
      import { useState } from 'react';
@@ -188,7 +188,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
     ```
      - Verify the output at `http://localhost:3000`.
 
-12. Automatic Time Update
+12. Automatic Time Update:
     - We need to update the time automatically without having to click refresh every second. In order to do this, we use a React Hook called useEffect(), which updates the page after the mentioned time has passed(E.g: 1000ms/ 1s)
       ```
       import { useState, useEffect } from 'react';
