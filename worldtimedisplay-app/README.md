@@ -48,7 +48,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
    ```
    P.S: The AppName should only contain lowercase alphabets
 
-4. Changing the directory to the <AppName>:
+4. Changing the directory to the AppName:
    ```
    cd <app-name>
    ```
