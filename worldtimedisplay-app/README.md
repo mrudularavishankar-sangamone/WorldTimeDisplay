@@ -1,6 +1,4 @@
-<img width="404" height="484" alt="image" src="https://github.com/user-attachments/assets/fc895eb4-2913-4ad3-aee5-a005d07c477e" />
-
-### World Time Display
+# World Time Display
 
 This ReactJS app displays the current local time in 10 major cities around the world. It helps users easily check the time in different parts of the world at a glance.
 
@@ -16,7 +14,7 @@ This ReactJS app displays the current local time in 10 major cities around the w
 - Sydney
 - Wellington
 
-### Technologies Used:
+## Technologies Used:
 - ReactJS - UI framework and interactivity
 - HTML - Markup structure
 - CSS - Styling
@@ -29,65 +27,56 @@ This ReactJS app displays the current local time in 10 major cities around the w
 
 ### Steps:
 
-1. **Verify if npm is installed in your device/workspace(for Windows)**
-   - Before running the project, ensure that **npm** is installed on your system.
-   - Open the Terminal in VSCode.
-   - Run the following command:
-     ```
+1. Verify if npm is installed in your device/workspace(for Windows):
+    - Before running the project, ensure that npm is installed on your system.
+    - Open the Terminal in VSCode.
+    - Run the following command:
+      ```
       npm -v
-     ```
-     If you see a version number (e.g., 10.4.1), npm is installed. If you see an error like: ``` 'npm' is not recognized as an internal or external command ```, then npm is not installed.
-   - Installing npm:
-      * Download Node.js from 'https://nodejs.org/'.
-      * Install Node.js by running the installer and follow the prompts.
-      * Verify the installation by running the command in terminal ``` npm -v ```
+      ```
+    - If a version number is displayed (for example, 10.4.1), npm is already installed. You can skip Step 2.
+    - If you see an error such as: 'npm' is not recognized as an internal or external command, then npm is not installed. Proceed to Step 2
 
-2. **Install the React package and its dependencies:**
+2. Installing npm:
+    - Download Node.js from 'https://nodejs.org/'.
+    - Install Node.js by running the installer and follow the prompts.
+    - Verify the installation by running the npm -v command in terminal.
+
+3. Install the React package and its dependencies:
    ```
    npx create-react-app <app-name>
    ```
-   P.S: The AppName should only contain **lowercase alphabets**
+   P.S: The AppName should only contain lowercase alphabets
 
-3. **Changing the directory to the <AppName>**
+4. Changing the directory to the <AppName>:
    ```
    cd <app-name>
    ```
 
-4. **Start the development server:**
+5. Start the development server:
    ```
    npm start
    ```
    The app will open in your browser at `http://localhost:3000`
 
-5.  **Delete the following files from src**
-    - App.test.js
-    - index.css
-    - logo.svg
-    - reportWebVitals.js
-    - setupTests.js
-
-6. **Modify index.js file**
-   - Delete the reportWebVitals import statement
-   - Delete the index.css import statement
-   - Delete the comments
-   - Delete the reportWebVitals() from the bottom of the code
-  
-7. **Modify App.js file**
+6. Modify App.js file:
    - Delete the logo.svg import statement
    - Delete all the lines of code between the return() in App function
    - Add the following statements in the return()
      ```
-     <>
-      <p>My React App</p>
-     </>
+     return(
+        <div>
+          <h1> World Clock Display </h1>
+        </div>
+     );
      ```
    - Verify the output at `http://localhost:3000`. Now, the React Application is ready. 
      
-8. **Grouping the jsx files**
+7. Grouping the jsx files
    - Create a folder called pages under src
-   - Create a file called pages/page1.jsx
-   - Add the ```export default function page1(){ }``` statement 
-   - Create an array of cities inside page1() function within the { }:
+   - Create a file called Page1.jsx under pages folder
+   - Add the ```export default function Page1(){ }``` statement 
+   - Create an array of cities inside Page1() function within the { }:
      ```
        const cities = [
            { name : 'San Francisco', timezone: 'America/Los_Angeles' },
@@ -121,35 +110,33 @@ This ReactJS app displays the current local time in 10 major cities around the w
      )
      ```
 
-9. **Include page1.jsx reference in App.js**
+8. Include Page1.jsx reference in App.js:
     ```
-    import Page1 from './pages/page1.jsx';
+    import Page1 from './pages/Page1.jsx';
     ```
-    - Add <Page1/> React tag within the return() so that the contents of page1.jsx shows up on the screen.
+    - Add <Page1/> React tag within the return() so that the contents of Page1.jsx shows up on the screen.
       ```
       return (
-       <>
-         <p>My React App</p>
-         <Page1 />
-       </>
+        <div className = 'App'>
+          <h1> World Clock Display </h1>
+          <Page1 />
+        </div>
       );
       ```
    - Verify the output at `http://localhost:3000`.
-     
-     <img width="404" height="484" alt="image" src="https://github.com/user-attachments/assets/ac677e39-4836-4e7e-8f9a-b2f0dc15185a" />
 
-10. **Create page2.jsx under src/pages**
-   - Create a file called pages/page2.jsx
+9. Create Page2.jsx under src/pages
+   - Create a file called Page2.jsx under pages folder
    - Import the useState in-built function from React:
      ```
       import { useState } from 'react';
      ```
-   - Add the ``` export default function page2({city}) { } ``` statement
-   - Create an array of time and setTime to hold the current time within the { } of the page2 function:
+   - Add the ``` export default function Page2({city}) { } ``` statement
+   - Create an array of time and setTime to hold the current time within the { } of the Page2 function:
      ```
      import { useState } from 'react';
       
-     export default function page2({city}) {
+     export default function Page2({city}) {
         const [time, setTime] = useState(new Date());
      }
      ```
@@ -161,11 +148,11 @@ This ReactJS app displays the current local time in 10 major cities around the w
         </div>
      )
      ```
-11. **Include page2.jsx reference in page1.jsx**
+10. Include Page2.jsx reference in Page1.jsx
     ```
-    import Page2 from './page2.jsx';
+    import Page2 from './Page2.jsx';
     ```
-    - Add <Page2/> React tag within the return() so that the contents of page2.jsx shows up on the screen.
+    - Add <Page2/> React tag within the return() so that the contents of Page2.jsx shows up on the screen.
       ```
       return(
          <div>
@@ -180,14 +167,12 @@ This ReactJS app displays the current local time in 10 major cities around the w
       over.
    - Verify the output at `http://localhost:3000`.
 
-     <img width="512" height="689" alt="image" src="https://github.com/user-attachments/assets/7cf4e9ed-f892-428a-9d26-e9843170676c" />
-
-12. **Adding the Timezones to each of the city**
-    - The above step (Step11) displays only the time acquired from the system and does not specifically display the time in each city. In order to display the respective time in each city, we need to add the following to page2.jsx within { } page2() function:
+11. Adding the Timezones to each of the city
+    - The above step (Step11) displays only the time acquired from the system and does not specifically display the time in each city. In order to display the respective time in each city, we need to add the following to Page2.jsx within { } Page2() function:
     ```
      import { useState } from 'react';
       
-     export default function page2({city}) {
+     export default function Page2({city}) {
         const [time, setTime] = useState(new Date());
          
         const formattedTime = time.toLocaleTimeString('en-US', {
@@ -202,15 +187,13 @@ This ReactJS app displays the current local time in 10 major cities around the w
      } 
     ```
      - Verify the output at `http://localhost:3000`.
-   
-    <img width="527" height="708" alt="image" src="https://github.com/user-attachments/assets/09404544-ae9f-4b88-9efd-2037e0ce1b62" />
 
-13. **Automatic Time Update**
+12. Automatic Time Update
     - We need to update the time automatically without having to click refresh every second. In order to do this, we use a React Hook called useEffect(), which updates the page after the mentioned time has passed(E.g: 1000ms/ 1s)
       ```
       import { useState, useEffect } from 'react';
       
-      export default function page2( {city} ) {
+      export default function Page2( {city} ) {
            const [time, setTime] = useState(new Date());
 
            function updateTime() {
@@ -238,5 +221,3 @@ This ReactJS app displays the current local time in 10 major cities around the w
       }
       ```
      - Verify the output at `http://localhost:3000`. The time gets updated automatically.
-
-    <img width="477" height="739" alt="image" src="https://github.com/user-attachments/assets/f3a1cf40-4b20-4720-a9af-fb941f215326" />
